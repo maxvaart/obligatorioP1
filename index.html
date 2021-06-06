@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Obligatorio</title>
+      <script src='js/script.js'></script>
+  </head>
+  <body>
+    <div id="contenedor">
+
+      <div id="cabezal" class="clearfix">
+        <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
+        <ul id="navPrincipal">
+          <li>
+            <a>Inicio</a>
+          </li>
+          <li>
+            <a>Entregas</a>
+          </li>
+          <li>
+            <a>Alumnos</a>
+          </li>
+          <li>
+            <a>Estadisticas</a>
+          </li>
+          <li>
+            <a>Perfil</a>
+          </li>
+          <li>
+            <a>Salir</a>
+          </li>
+        </ul>
+        <div id="aux">
+          <a>Iniciar Sesión</a> | <a>Registrarse</a>
+        </div><!-- FIN AUX -->
+      </div><!-- FIN CABEZAL -->
+
+      
+
+      <div id="contenido">
+
+        <div id="login">
+          <h3>Iniciar Sesión</h3>
+          <label for="userLogin">Usuario</label>
+          <input type="text" id="userLogin" name="userLogin"><br>
+          <label for="userPsw">Contraseña</label>
+          <input type="password" id="userPsw" name="userPsw"><br><br>
+          <input type="button" id="btnLogin" value="Ingresar">
+          <input type="button" id="btnRegister" value="Registrarse">
+          <hr>
+        </div><!-- FIN LOGIN -->
+
+        <div id="register">
+
+          <h3>Registrate</h3>
+
+          <h5>Información Personal</h5><hr><br>
+          <label for="firstNameRegister">Nombre</label>
+          <input type="text" id="firstNameRegister" name="firstNameRegister"><br>
+          <label for="lastNameRegister">Apellido</label>
+          <input type="text" id="lastNameRegister" name="lastNameRegister"><br>
+          <label for="emailRegister">Email</label>
+          <input type="email" id="emailRegister" name="emailRegister"><br>
+
+          <h5>Información de Cuenta</h5><hr><br>
+          <label for="userRegister">Usuario</label>
+          <input type="text" id="userRegister" name="userRegister"><br>
+          <label for="pswRegister">Contraseña*</label>
+          <input type="password" id="pswRegister" name="pswRegister"><br>
+          <p><em>*La contraseña deberá tener un mínimo de 4 caracteres, contando con al menos una mayúscula, una minúscula y un número.</em></p>
+          <label for="isProf">Soy profesor </label>
+          <input type="checkbox" id="isProf" name="isProf"><br><br>
+          <label for="profRegister">Selecciona Profesor A Cargo</label>
+          <select name="profRegister" id="profRegister">
+            <option value="Profesor 1">Profesor 1</option>
+            <option value="Profesor 2">Profesor 2</option>
+            <option value="Profesor 3">Profesor 3</option>
+            <option value="Profesor 4 ">Profesor 4 </option>
+          </select><br><br>
+          <input type="button" id="btnRegister" value="Registrarse"><br>
+          <hr>
+
+        </div><!-- FIN REGISTER -->
+
+        <div id="publicarEjercicio">
+          <h3>Publicar Ejercicio</h3>
+          <label for="tituloEjercicio">Titulo:</label>
+          <input type="text" id="tituloEjercicio" name="tituloEjercicio"><br><br>
+          <label for="descripcionEjercicio">Descripcion:</label>
+          <textarea></textarea><br><br>
+          <label type="archivoEjercicio">Adjuntar archivo</label>
+          <input type="file" id="archivoEjercicio" name="archivoEjercicio"><br><br>
+          <input type="button" value="Publicar" id="btnPublicarEjercicio"><br>
+          <hr>
+        </div><!-- FIN PUBLICAR EJERCICIO -->
+
+        <div id="realizarEntrega">
+          <h3>Entrega para ejercicio: </h3><span id="nombreEntrega"></span>
+          <label for="tituloEjercicio">Titulo: </label>
+          <input type="text" id="tituloEntrega" name="tituloEjercicio">
+          <label for="fecha">Fecha </label>
+          <input type="date" id="fecha" name="fecha"><br><br>
+          <label for="descripcionEjercicio">Descripcion:</label>
+          <textarea></textarea><br><br>
+          <label type="archivoEjercicio">Adjuntar archivo</label>
+          <input type="file" id="archivoEntrega" name="archivoEjercicio"><br><br>
+          <input type="button" value="Enviar Entrega" id="btnEnviarEntrega"><br>
+          <hr>
+        </div><!-- FIN PUBLICAR REALIZAR ENTREGA -->
+
+        <div id="inicio">
+
+          <div>
+            <h2>Ejercicio 1</h2>
+            <img src="https://develotion.com/assets/img/ej1.png">
+            <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+            <input type="button" value="Hacer entrega">
+          </div>
+
+          <hr>
+
+          <div>
+            <h2>Ejercicio 4</h2>
+            <img src="https://develotion.com/assets/img/ej1.png">
+            <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+            <input type="button" value="Hacer entrega">
+          </div>
+
+        </div><!--FIN INICIO-->
+        
+        <div id="estadisticas">
+          <h3>Estidisticas</h3>
+          <p>Ejercicios Propuestos        <strong><span id="cantidadPropuestos">1</span></strong></p>
+          <p>Ejercicios Entregados        <strong><span id="cantidadEntregados">2</span></strong></p>
+          <p>Ejercicios Corregidos        <strong><span id="cantidadCorregidos">3</span></strong></p>
+          <p>Ejercicios Sin Corregir      <strong><span id="cantidadSinCorregir">4</span></strong></p>
+          <h5>Nivel</h5>
+          <p id="nivel">Intermedio</p>
+          <h5>Porcentaje de entrega</h5>
+          <p id="porcentajeEntrega">80%</p>
+          <hr>
+        </div><!-- FIN ESTADISTICAS -->
+
+        <div id="entregasFiltradas">
+          <div class="unEjercicio">
+
+            <div class="informacionEjercicio">
+              <h3>Titulo de un ejercicio</h3>
+              <strong><p class="descripcionDeEjercicio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis veniam hic quisquam fuga eligendi corrupti voluptatum nihil eaque recusandae! Repellat beatae repudiandae cupiditate excepturi voluptatum in molestiae harum porro eos.</p></strong>
+            </div>
+
+            <div class="accesoEjercicio">
+              <input type="button" id="verEntrega" value="Ver Entrega">
+              <input type="button" id="editarEntrega" value="Editar Entrega">
+              <input type="button" id="hacerEntrega" value="Realizar Entrega">
+            </div>
+            <hr>
+          </div>
+
+        </div><!-- FIN ENTREGAS FILTRADAS -->
+
+        <div id="entregas">
+
+          <div id="unaEntrega">
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Alumno</th>
+                  <th>Nombre de usuario</th>
+                  <th>Adjunto</th>
+                  <th>Nota</th>
+                </tr>
+              </thead>
+              <tbody class="unaEntrega">
+                <tr>
+                  <td><span id="nombreAlumnoEntrega">Nombre Alumno</span></td>
+                  <td><span id="usuarioAlumnoEntrega">Usuario Alumno</span></td>
+                  <td><span id="adjuntoEntrega">AdjuntoEntrega</span></td>
+                  <td>
+                    <select name="profRegister" id="profRegister">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea cols="125" rows="3" placeholder="Observaciones"></textarea>
+            <hr>
+          </div>
+          
+          <div id="unaEntrega">
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Alumno</th>
+                  <th>Nombre de usuario</th>
+                  <th>Adjunto</th>
+                  <th>Nota</th>
+                </tr>
+              </thead>
+              <tbody class="unaEntrega">
+                <tr>
+                  <td><span id="nombreAlumnoEntrega">Nombre Alumno</span></td>
+                  <td><span id="usuarioAlumnoEntrega">Usuario Alumno</span></td>
+                  <td><span id="adjuntoEntrega">AdjuntoEntrega</span></td>
+                  <td>
+                    <select name="profRegister" id="profRegister">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea cols="125" rows="3" placeholder="Observaciones"></textarea>
+            <hr>
+          </div>
+
+        </div><!-- FIN ENTREGAS -->
+
+      </div><!-- FIN CONTENIDO -->
+
+      <div id="pie">
+        <a href="https://www.ort.edu.uy">Footer</a>
+      </div><!-- FIN PIE -->
+    </div><!-- FIN CONTENEDOR -->
+
+  </body>
+</html>

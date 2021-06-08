@@ -131,7 +131,7 @@
 
         </div><!--FIN INICIO-->
         
-        <div id="estadisticas">
+        <div id="estadisticasAlumno">
           <h3>Estidisticas</h3>
           <p>Ejercicios Propuestos        <strong><span id="cantidadPropuestos">1</span></strong></p>
           <p>Ejercicios Entregados        <strong><span id="cantidadEntregados">2</span></strong></p>
@@ -142,7 +142,7 @@
           <h5>Porcentaje de entrega</h5>
           <p id="porcentajeEntrega">80%</p>
           <hr>
-        </div><!-- FIN ESTADISTICAS -->
+        </div><!-- FIN ESTADISTICAS ALUMNO -->
 
         <div id="entregasFiltradas">
           <div class="unEjercicio">
@@ -237,6 +237,51 @@
           </div>
 
         </div><!-- FIN ENTREGAS -->
+
+        <div id="estadisticasProfesor">
+          
+          <div id="estadisticasGenerales">
+            <h2>Alumnos con mas ejercicios resueltos</h2>
+            <p ><span id="alumnoMasEjercicios">Alumno </span> con <strong><span id="mayorCantidadEjercicios">39</span></strong> ejercicios realizados</p>
+            <h5>Total de entregas</h5>
+            <p><strong><span id="totalEntregas">55</span></strong></p>
+          </div>
+
+          <div id="estadisticasIndividual">
+            <label for="nivelSelect" >Filtrar por Nivel</label>
+            <select id="nivelSelect" name="nivelSelect">
+              <option>Inicial</option>
+              <option>Intermedio</option>
+              <option>Avanzado</option>
+            </select>
+            <label for="alumnosSelect" name="alumnosSelect">Filtrar por Nombre</label>
+            <select id="alumnosSelect">
+              <option>Un alumno</option>
+              <option>Un alumno</option>
+              <option>Un alumno</option>
+              <option>Un alumno</option>
+            </select><br><br>
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Nombre y Apellido</th>
+                  <th>Nombre de Usuario</th>
+                  <th>Ejercicios Planteados</th>
+                  <th>Ejercicios Resueltos</th>
+                </tr>
+              </thead>
+              <tbody id="alumnoFiltrado">
+                <tr>
+                  <td><span id="nombreAlumnoFiltrado">Alumno filtrado</span></td>
+                  <td><span id="usuarioAlumnoFiltrado">Usuario filtrado</span></td>
+                  <td><strong><span id="propuestosAlumnoFiltrado">2</span></strong></td>
+                  <td><strong><span id="realizadosAlumnoFiltrado">3</span></strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr>
+        </div><!-- FIN ESTADISTICAS PROFESOR -->
 
       </div><!-- FIN CONTENIDO -->
 

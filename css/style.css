@@ -190,3 +190,11 @@ input[type="button"] {
   text-decoration: none;
   color: #fff;
 }
+
+/*<<<<<<<<<<<<<<<-----NO ES POR DEFECTO----------------->>>>>>>>>*/
+
+table{
+  width: 100%;
+  text-align: center;
+  padding: auto;
+}

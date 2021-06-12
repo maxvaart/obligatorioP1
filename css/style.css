@@ -96,7 +96,7 @@ p.ver-mas {
   padding: 0 24px 10px 0;
 }
 
-#navPrincipal a {
+#navPrincipalP a , #navPrincipalA a {
   color: #0e1c20;
   cursor: pointer;
   color: #fff;
@@ -110,14 +110,14 @@ p.ver-mas {
   font-size: 14px;
 }
 
-#navPrincipal {
+#navPrincipalP, #navPrincipalA {
   float: right;
   margin-top: 5px;
   margin-right: 10px;
   max-width: 600px;
 }
 
-#navPrincipal li {
+#navPrincipalP li, #navPrincipalA li {
   font-family: "Merriweather", serif;
   list-style-type: none;
   padding: 10px;

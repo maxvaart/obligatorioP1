@@ -7,37 +7,55 @@
       <link rel="stylesheet" href="css/style.css">
       <title>Obligatorio</title>
       <script src='js/script.js'></script>
+      <script src='js/clases.js'></script>
   </head>
   <body>
     <div id="contenedor">
 
       <div id="cabezal" class="clearfix">
         <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo">
-        <ul id="navPrincipal">
+        <ul id="navPrincipalP">
           <li>
-            <a>Inicio</a>
+            <a id="tabIniProfe">Inicio</a>
           </li>
           <li>
-            <a>Entregas</a>
+            <a id="tabEntregasProfe">Entregas</a>
           </li>
           <li>
-            <a>Alumnos</a>
+            <a id="tabAlumnosProfe">Alumnos</a>
           </li>
           <li>
-            <a>Estadisticas</a>
+            <a id="tabEstadisticasProfe">Estadisticas</a>
           </li>
           <li>
-            <a>Perfil</a>
+            <a id="tabPerfilProfe">Perfil</a>
           </li>
           <li>
-            <a>Salir</a>
+            <a id="tabSalirProfe">Salir</a>
+          </li>
+        </ul>
+        <ul id="navPrincipalA">
+          <li>
+            <a id="tabIniAlum">Inicio</a>
+          </li>
+          <li>
+            <a id="tabEntregasAlum">Entregas</a>
+          </li>
+          <li>
+            <a id="tabEstadisticasAlum" >Estadisticas</a>
+          </li>
+          <li>
+            <a id="tabPerfilAlum" >Perfil</a>
+          </li>
+          <li>
+            <a id="tabSalirAlum" >Salir</a>
           </li>
         </ul>
         <div id="aux">
-          <a>Iniciar Sesión</a> | <a>Registrarse</a>
+          <a class="btnVerLogin" >Iniciar Sesión</a> | <a class="btnRegister">Registrarse</a>
         </div><!-- FIN AUX -->
       </div><!-- FIN CABEZAL -->
-
+      
       
 
       <div id="contenido">
@@ -48,8 +66,8 @@
           <input type="text" id="userLogin" name="userLogin"><br>
           <label for="userPsw">Contraseña</label>
           <input type="password" id="userPsw" name="userPsw"><br><br>
-          <input type="button" id="btnLogin" value="Ingresar">
-          <input type="button" id="btnRegister" value="Registrarse">
+          <input type="button" id="btnCompletarLogin" value="Ingresar">
+          <input type="button" class="btnRegister" value="Registrarse">
           <hr>
         </div><!-- FIN LOGIN -->
 
@@ -73,14 +91,17 @@
           <p><em>*La contraseña deberá tener un mínimo de 4 caracteres, contando con al menos una mayúscula, una minúscula y un número.</em></p>
           <label for="isProf">Soy profesor </label>
           <input type="checkbox" id="isProf" name="isProf"><br><br>
-          <label for="profRegister">Selecciona Profesor A Cargo</label>
-          <select name="profRegister" id="profRegister">
-            <option value="Profesor 1">Profesor 1</option>
-            <option value="Profesor 2">Profesor 2</option>
-            <option value="Profesor 3">Profesor 3</option>
-            <option value="Profesor 4 ">Profesor 4 </option>
-          </select><br><br>
-          <input type="button" id="btnRegister" value="Registrarse"><br>
+          <div id="profRegister">          
+            <label for="profRegister">Selecciona Profesor A Cargo</label>
+            <select name="profRegister" id="profeRegister">
+              <option value="Profesor 1">Profesor 1</option>
+              <option value="Profesor 2">Profesor 2</option>
+              <option value="Profesor 3">Profesor 3</option>
+              <option value="Profesor 4 ">Profesor 4 </option>
+            </select><br><br>
+          </div>
+          <input type="button" class="btnVerLogin" value="Ya tengo cuenta"><br>
+          <input type="button" id="btnCompletarRegistro" value="Registrarse"><br>
           <hr>
 
         </div><!-- FIN REGISTER -->
@@ -162,7 +183,7 @@
 
         </div><!-- FIN ENTREGAS FILTRADAS -->
 
-        <div id="entregas">
+        <div id="entregasProfe">
 
           <div id="unaEntrega">
             <table style="width:100%">
@@ -236,7 +257,7 @@
             <hr>
           </div>
 
-        </div><!-- FIN ENTREGAS -->
+        </div><!-- FIN ENTREGASPROFE -->
 
         <div id="estadisticasProfesor">
           

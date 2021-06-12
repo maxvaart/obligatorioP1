@@ -1,12 +1,13 @@
 /*                                           CLASES                                           */
 
 class Alumno {
-    constructor(nombre, apellido, username, psw, mail) {
+    constructor(nombre, apellido, username, psw, mail, profesor) {
       this.nombre = nombre;
       this.apellido = apellido;
       this.username = username;
       this.password = psw;
       this.mail = mail;
+      this.profesor = profesor;
       this.nivel = "Inicial";
       this.cantCorregidos = 0;
       this.cantSinCorregir = 0;

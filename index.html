@@ -77,29 +77,23 @@
 
           <h5>Información Personal</h5><hr><br>
           <label for="firstNameRegister">Nombre</label>
-          <input type="text" id="firstNameRegister" name="firstNameRegister"><br>
+          <input type="text" id="firstNameRegister" name="firstNameRegister" required><br>
           <label for="lastNameRegister">Apellido</label>
-          <input type="text" id="lastNameRegister" name="lastNameRegister"><br>
+          <input type="text" id="lastNameRegister" name="lastNameRegister" required><br>
           <label for="emailRegister">Email</label>
-          <input type="email" id="emailRegister" name="emailRegister"><br>
+          <input type="email" id="emailRegister" name="emailRegister" required><br>
+          <label for="numRegister">Telefono</label>
+          <input type="number" id="numRegister" name="numRegister"><br>
 
           <h5>Información de Cuenta</h5><hr><br>
           <label for="userRegister">Usuario</label>
-          <input type="text" id="userRegister" name="userRegister"><br>
+          <input type="text" id="userRegister" name="userRegister" required><br>
           <label for="pswRegister">Contraseña*</label>
-          <input type="password" id="pswRegister" name="pswRegister"><br>
+          <input type="password" id="pswRegister" name="pswRegister" required><br>
           <p><em>*La contraseña deberá tener un mínimo de 4 caracteres, contando con al menos una mayúscula, una minúscula y un número.</em></p>
           <label for="isProf">Soy profesor </label>
           <input type="checkbox" id="isProf" name="isProf"><br><br>
-          <div id="profRegister">          
-            <label for="profRegister">Selecciona Profesor A Cargo</label>
-            <select name="profRegister" id="profeRegister">
-              <option value="Profesor 1">Profesor 1</option>
-              <option value="Profesor 2">Profesor 2</option>
-              <option value="Profesor 3">Profesor 3</option>
-              <option value="Profesor 4 ">Profesor 4 </option>
-            </select><br><br>
-          </div>
+          <div id="profRegister"></div>
           <input type="button" class="btnVerLogin" value="Ya tengo cuenta"><br>
           <input type="button" id="btnCompletarRegistro" value="Registrarse"><br>
           <hr>
@@ -108,12 +102,18 @@
 
         <div id="publicarEjercicio">
           <h3>Publicar Ejercicio</h3>
-          <label for="tituloEjercicio">Titulo:</label>
-          <input type="text" id="tituloEjercicio" name="tituloEjercicio"><br><br>
-          <label for="descripcionEjercicio">Descripcion:</label>
-          <textarea></textarea><br><br>
-          <label type="archivoEjercicio">Adjuntar archivo</label>
-          <input type="file" id="archivoEjercicio" name="archivoEjercicio"><br><br>
+          <label for="tituloNuevoEjercicio">Titulo:</label>
+          <input type="text" id="tituloNuevoEjercicio" name="tituloNuevoEjercicio"><br><br>
+          <label for="descripcionNuevoEjercicio">Descripcion:</label>
+          <textarea id="descripcionNuevoEjercicio"></textarea><br><br>
+          <label for="archivoNuevoEjercicio">Adjuntar archivo</label>
+          <input type="file" id="archivoNuevoEjercicio" name="archivoNuevoEjercicio"><br><br>
+          <label for="nivelNuevoEjercicio">Ingrese nivel del ejercicio</label><br>
+          <select id="nivelNuevoEjercicio" name="nivelNuevoEjercicio">
+            <option>Inicial</option>
+            <option>Intermedio</option>
+            <option>Avanzado</option>
+          </select>
           <input type="button" value="Publicar" id="btnPublicarEjercicio"><br>
           <hr>
         </div><!-- FIN PUBLICAR EJERCICIO -->
@@ -136,7 +136,7 @@
 
           <div>
             <h2>Ejercicio 1</h2>
-            <img src="https://develotion.com/assets/img/ej1.png">
+            <img href="assets/img/ej1.png">
             <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
             <input type="button" value="Hacer entrega">
           </div>
@@ -238,6 +238,7 @@
                   <td><span id="adjuntoEntrega">AdjuntoEntrega</span></td>
                   <td>
                     <select name="profRegister" id="profRegister">
+                      <option value="1">Sin Corregir</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -258,6 +259,61 @@
           </div>
 
         </div><!-- FIN ENTREGASPROFE -->
+
+        <div id="entregasAlumno">
+
+          <div id="unaEntrega">
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Nombre Ejercicio</th>
+                  <th>Fecha Publicado</th>
+                  <th>Profesor</th>
+                  <th>Nota</th>
+                </tr>
+              </thead>
+              <tbody class="unaEntrega">
+                <tr>
+                  <td><span id="nombreEj">Ejercicio 44</span></td>
+                  <td><span id="fechaPublicadoEj">12 / 12 / 1994</span></td>
+                  <td><span id="profesorDeEj">Juan Perez</span></td>
+                  <td><span id="notaEj">10</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea cols="125" rows="3" placeholder="Observaciones" id="devolucionEj"></textarea>
+            <hr>
+          </div>
+          
+          <div id="unaEntrega">
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Nombre Ejercicio</th>
+                  <th>Fecha Publicado</th>
+                  <th>Profesor</th>
+                  <th>Nota</th>
+                </tr>
+              </thead>
+              <tbody class="unaEntrega">
+                <tr>
+                  <td><span id="nombreEj">Ejercicio 44</span></td>
+                  <td><span id="fechaPublicadoEj">12 / 12 / 1994</span></td>
+                  <td><span id="profesorDeEj">Juan Perez</span></td>
+                  <td><span id="notaEj">10</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <textarea cols="125" rows="3" placeholder="Observaciones" id="devolucionEj"></textarea>
+            <hr>
+          </div>
+        </div><!-- FIN ENTREGAS ALUMNO -->
+
+        <div id="alumnos">
+            <div id="AlumnosFiltrados"></div>
+          <hr>
+          <input type="button" value="Confirmar Cambios" id="btnActualizarNiveles"><br>
+        </div><!-- FIN ALUMNOS -->
 
         <div id="estadisticasProfesor">
           
@@ -303,6 +359,44 @@
           </div>
           <hr>
         </div><!-- FIN ESTADISTICAS PROFESOR -->
+
+        <div id="perfil">
+          <div id="infoPerfil">
+            <h2><span id="nombrePerfil">NOMBRE </span><span id="apellidoPerfil">APELLIDO </span></h2>
+            <label for="imgPerfil"><img id="muestraImg" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"></label><br>
+            <h3>Email: <em><span id="emailPerfil">maximiliano_lain3@hotmai.com</span></em></h3>
+            <h3>Telefono: <em><span id="telPerfil">093985680</span></em></h3>
+            <h3>Nivel: <em><span id="nivelPerfil">INTERMEDIO</span></em></h3>
+            <h3>Profesor: <em><span id="profePerfil">juan perez</span></em></h3>
+            <br>
+          </div>
+
+          <div id="modificarInfoPersonal">
+            <hr>
+            <h5>Cambiar Información Personal</h5><hr><br>
+            <label for="cambiarNombrePerfil">Nombre</label>
+            <input type="text" id="cambiarNombrePerfil" name="cambiarNombrePerfil"><br>
+            <label for="cambiarApellidoPerfil">Apellido</label>
+            <input type="text" id="cambiarApellidoPerfil" name="cambiarApellidoPerfil"><br>
+            <label for="cambiarMailPerfil">Email</label>
+            <input type="email" id="cambiarMailPerfil" name="cambiarMailPerfil"><br>
+            <label type="fileImgPerfil">Nueva Foto</label>
+            <input type="file" id="fileImgPerfil" name="fileImgPerfil"><br><br>
+            <input type="button" id="btnCambiarInfoPerfil" value="Modificar Informacion"><br>
+          </div>
+
+          <div id="modificarContraseña">
+            <hr>
+            <h5>Cambiar Contraseña</h5><hr><br>
+            <label for="contraseñaActualPerfil">Contraseña Actual</label>
+            <input type="password" id="contraseñaActualPerfil" name="contraseñaActualPerfil"><br>
+            <label for="nuevaContraseñaPerfil">Nueva Contraseña*</label>
+            <input type="password" id="nuevaContraseñaPerfil" name="nuevaContraseñaPerfil"><br>
+            <p><em>*La contraseña deberá tener un mínimo de 4 caracteres, contando con al menos una mayúscula, una minúscula y un número.</em></p><br>
+            <input type="button" id="btnModificarContraseña" value="Modificar contraseña"><br>
+            <hr>
+          </div>
+        </div><!-- FIN PERFIL -->
 
       </div><!-- FIN CONTENIDO -->
 

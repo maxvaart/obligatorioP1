@@ -5,10 +5,11 @@ class Alumno {
       this.nombre = nombre;
       this.apellido = apellido;
       this.username = username;
-      this.password = psw;
       this.mail = mail;
       this.telefono = telefono;
       this.profesor = profesor;
+      this.password = psw;
+      this.imagen = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
       this.nivel = "Inicial";
       //this.cantCorregidos = 0;
       //this.cantSinCorregir = 0;
@@ -24,9 +25,10 @@ class Alumno {
       this.nombre = nombre;
       this.apellido = apellido;
       this.username = username;
-      this.password = psw;
       this.mail = mail;
       this.telefono = telefono;
+      this.password = psw;
+      this.imagen = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
       this.alumnos = [];
       this.cantIniciales = 0;
       this.cantIntermedios = 0;
@@ -50,14 +52,13 @@ class Alumno {
   }
 
   class Entrega{
-    constructor(nombreAutor, usuarioAutor, archivo, observaciones, nota, fecha, corregida, entregada){
-      this.nombreAutor = nombreAutor;
-      this.usuarioAutor = usuarioAutor;
+    constructor(alumnoAutor, archivo, observaciones, nota, fecha, entregada, corregida){
+      this.alumnoAutor = alumnoAutor;
       this.archivo = archivo;
       this.observaciones = observaciones;
       this.nota = nota;
       this.fecha = fecha;
-      this.corregida = corregida;
       this.entregada = entregada;
+      this.corregida = corregida;
     }
   }

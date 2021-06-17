@@ -101,6 +101,8 @@
         </div><!-- FIN REGISTER -->
 
         <div id="publicarEjercicio">
+          <h3>Buscar Ejercicio</h3>
+          <input type="text" name="buscadorEjercicios" id="buscadorEjercicios"><br><hr>
           <h3>Publicar Ejercicio</h3>
           <label for="tituloNuevoEjercicio">Titulo:</label>
           <input type="text" id="tituloNuevoEjercicio" name="tituloNuevoEjercicio"><br><br>
@@ -133,23 +135,23 @@
         </div><!-- FIN PUBLICAR REALIZAR ENTREGA -->
 
         <div id="inicio">
+          <div id="ejerciciosFiltrados">
+            <div>
+              <h2>Ejercicio 1</h2>
+              <img href="assets/img/ej1.png">
+              <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+              <input type="button" value="Hacer entrega">
+            </div>
 
-          <div>
-            <h2>Ejercicio 1</h2>
-            <img href="assets/img/ej1.png">
-            <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
-            <input type="button" value="Hacer entrega">
+            <hr>
+
+            <div>
+              <h2>Ejercicio 4</h2>
+              <img src="https://develotion.com/assets/img/ej1.png">
+              <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
+              <input type="button" value="Hacer entrega">
+            </div>
           </div>
-
-          <hr>
-
-          <div>
-            <h2>Ejercicio 4</h2>
-            <img src="https://develotion.com/assets/img/ej1.png">
-            <p>Donec dapibus arcu a diam commodo, vel vehicula orci volutpat. Vestibulum convallis tempor mattis. Donec molestie semper leo vel luctus. Curabitur quis nisi maximus, luctus lorem quis, dignissim augue.</p>
-            <input type="button" value="Hacer entrega">
-          </div>
-
         </div><!--FIN INICIO-->
         
         <div id="estadisticasAlumno">
@@ -183,10 +185,10 @@
 
         </div><!-- FIN ENTREGAS FILTRADAS -->
 
-        <div id="visualizadorEntregasProfe">
-          <input type="text" name="buscadorEjercicios" id="buscadorEjercicios"><br><br>
-          <div id="entregasProfe"></div>
-        </div><!-- FIN ENTREGASPROFE -->
+          
+          <div id="entregasProfe">
+              <!-- NINGUN EJERCICIO PARTICULAR, SE MUESTRAN TODAS -->
+          </div><!-- FIN ENTREGASPROFE -->
 
         <div id="entregasAlumno">
 
@@ -247,7 +249,8 @@
           
           <div id="estadisticasGenerales">
             <h2>Alumnos con mas ejercicios resueltos</h2>
-            <p ><span id="alumnoMasEjercicios">Alumno </span> con <strong><span id="mayorCantidadEjercicios">39</span></strong> ejercicios realizados</p>
+            <!--<p id="alumnoMasEjercicios"><span>Alumno </span> con <strong><span id="mayorCantidadEjercicios">39</span></strong> ejercicios realizados</p>-->
+            <p id="alumnoMasEjercicios"></p>
             <h5>Total de entregas</h5>
             <p><strong><span id="totalEntregas">55</span></strong></p>
           </div>
